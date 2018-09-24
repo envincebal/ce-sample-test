@@ -8,8 +8,25 @@ body {
   background-color: #272932;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
+}
+
+p {
+  margin: 10px 0 16px 0;
+}
+
+.yes {
+  color: #7ef10a;
+}
+
+.no {
+  color: #f14f4f;
 }
 
 .App {
@@ -19,27 +36,73 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .title,
-.subtitle{
+.subtitle {
   color: #00dffc;
 }
 
-.display-container {
-  margin: 30px 0;
+.display-total-container {
+  margin: 30px 0 0 0;
   display: flex;
 }
 
-.display-count {
+.display-total-count {
   background-color: #274555;
   border-radius: 5px;
-  width: 400px;
-  margin: 20px 15px;
+  max-width: 400px;
+  margin: 20px 10px;
+  color: #ffc952;
+  flex-grow: 1;
+}
+
+.display-total-count h2 {
+  padding: 20px 0 0 0;
+  font-size: 30px;
+}
+
+.display-total-count p {
+  font-size: 20px;
+}
+
+.daily-count-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.daily-count{
+  flex-grow: 1;
+  padding: 16px 0 0 0;
+  background-color: #274555;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.daily-count h3{
+  color: #00dffc;
+}
+
+.daily-count h5{
   color: #ffc952;
 }
 
-.display-count h2 {
-  margin: 20px 0 0 0;
-  font-size: 30px;
+.daily-count-section {
+  display: inline-flex;
 }
-.display-count p {
-  font-size: 20px;
+
+.daily-AC,
+.daily-heating{
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 660px){
+  .display-total-container {
+    display: block;
+  }
+
+  .display-total-count{
+    max-width: 100%;
+  }
+
+  .display-total-count p {
+    padding: 0 0 20px 0;
+  }
 }
